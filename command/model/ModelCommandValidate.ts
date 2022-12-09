@@ -1,10 +1,12 @@
-import {ModelObjectAny} from "../../libs/ModelObjectAny";
+import {ModelCommandValidateRiles} from "./ModelCommandValidateRiles";
+import {ManualCommandRilesType} from "../manual/ManualCommandRilesType";
 
-export interface ModelCommandValidate {
-    key: String;
-    riles: {
-        type: String,
-        error: String,
-        params: ModelObjectAny,
-    }[];
+export class ModelCommandValidate {
+    private key: String;
+    private riles: ModelCommandValidateRiles[];
+
+    constructor() {
+        this.key = "";
+        this.riles = [new ModelCommandValidateRiles()];
+    }
 }
