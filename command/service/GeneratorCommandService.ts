@@ -2,7 +2,7 @@
 // import { ManualCommandType } from "../manual/ManualCommandType";
 // import {ManualCommandRilesType} from "../manual/ManualCommandRilesType";
 // import {ManualCommandTypeVar} from "../manual/ManualCommandTypeVar";
-// import {ManualCommandDataType} from "../manual/ManualCommandDataType";
+// import {ManualCommandIfsType} from "../manual/ManualCommandIfsType";
 // import {ManualCommandSqlConvertType} from "../manual/ManualCommandSqlConvertType";
 //
 // export class GeneratorCommandService {
@@ -129,11 +129,11 @@
 //      * Command ifs
 //      * */
 //     public addIfsParams(indexCommand: number){
-//         this.addIfsData(indexCommand, ManualCommandDataType.params)
+//         this.addIfsData(indexCommand, ManualCommandIfsType.params)
 //     }
 //
 //     public  addIfsDataset(indexCommand: number){
-//         this.addIfsData(indexCommand, ManualCommandDataType.dataset)
+//         this.addIfsData(indexCommand, ManualCommandIfsType.dataset)
 //     }
 //
 //     public addIfsValue(indexCommand: number){

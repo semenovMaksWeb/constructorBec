@@ -1,12 +1,25 @@
 import {ModelCommandValidateRiles} from "./ModelCommandValidateRiles";
 import {ManualCommandRilesType} from "../manual/ManualCommandRilesType";
+import {ModelKey} from "./ModelKey";
 
-export class ModelCommandValidate {
-    private key: String;
-    private riles: ModelCommandValidateRiles[];
+export class ModelCommandValidate extends  ModelKey{
+    private readonly _riles: ModelCommandValidateRiles[];
 
     constructor() {
-        this.key = "";
-        this.riles = [new ModelCommandValidateRiles()];
+        super();
+        this.key = null;
+        this._riles = [new ModelCommandValidateRiles()];
+    }
+
+    get riles(){
+        return this._riles;
+    }
+
+    public addRiles(){
+        this._riles.push(new ModelCommandValidateRiles());
+    }
+
+    public deleteRiles(index:number){
+        this._riles.splice(index, 1);
     }
 }
