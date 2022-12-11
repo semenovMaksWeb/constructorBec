@@ -8,6 +8,7 @@ export class ModelCommand extends ModelKey{
     private _ifs?: ModelCommandIfs[];
     private _sql?: ModelCommandSql;
     private _validate?: ModelCommandValidate[];
+    private _children: ModelCommand[]
     private _type: string;
 
     constructor() {
@@ -30,6 +31,10 @@ export class ModelCommand extends ModelKey{
             }
             case ManualCommandType.postgresql: {
                 this._sql = new ModelCommandSql();
+                break;
+            }
+            case ManualCommandType.block: {
+                this._children = [];
                 break;
             }
         }
@@ -63,8 +68,21 @@ export class ModelCommand extends ModelKey{
     public deleteIfs(index:number){
         this._ifs.splice(index, 1);
     }
-
+    /* sql */
     get sql(){
         return this._sql;
     }
+
+    /* children */
+    public addChildren(){
+        this._children.push(new ModelCommand());
+    }
+
+    public deleteChildren(index: number){
+        this._children.splice(index, 1);
+    }
+    get children(){
+        return this._children;
+    }
+
 }
