@@ -1,0 +1,12 @@
+<template>
+  <ConfigBack/>
+</template>
+<script lang="ts">
+import ConfigBack from "../../components/config/back/configBack.vue";
+export default {
+  components: {ConfigBack}
+}
+</script>
+<style lang="">
+    
+</style>

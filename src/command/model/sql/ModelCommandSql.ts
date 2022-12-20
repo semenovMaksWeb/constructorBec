@@ -1,6 +1,6 @@
 import {ModelCommandSqlData} from "./ModelCommandSqlData";
-import {ManualCommandTypeVar} from "../manual/ManualCommandTypeVar";
-import {ManualCommandSqlConvertType} from "../manual/ManualCommandSqlConvertType";
+import {ManualCommandTypeVar} from "../../manual/ManualCommandTypeVar";
+import {ManualCommandSqlConvertType} from "../../manual/ManualCommandSqlConvertType";
 
 export class ModelCommandSql {
     private _data?: ModelCommandSqlData[];

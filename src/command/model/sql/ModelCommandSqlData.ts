@@ -1,4 +1,4 @@
-import {ModelCommandData} from "./ModelCommandData";
+import {ModelCommandData} from "../ModelCommandData";
 
 export class ModelCommandSqlData extends ModelCommandData {
     private _type: string;

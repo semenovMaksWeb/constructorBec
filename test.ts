@@ -1,10 +1,10 @@
-import {GeneratorCommandService} from "./command/service/GeneratorCommandService";
-import {ManualCommandType} from "./command/manual/ManualCommandType";
-import {ManualCommandTypeVar} from "./command/manual/ManualCommandTypeVar";
-import {ManualCommandRilesType} from "./command/manual/ManualCommandRilesType";
-import {ManualCommandIfsType} from "./command/manual/ManualCommandIfsType";
-import {ManualCommandIfsOperator} from "./command/manual/ManualCommandIfsOperator";
-import {ManualCommandSqlData} from "./command/manual/ManualCommandSqlData";
+import {GeneratorCommandService} from "./src/command/service/GeneratorCommandService";
+import {ManualCommandType} from "./src/command/manual/ManualCommandType";
+import {ManualCommandTypeVar} from "./src/command/manual/ManualCommandTypeVar";
+import {ManualCommandRilesType} from "./src/command/manual/ManualCommandRilesType";
+import {ManualCommandIfsType} from "./src/command/manual/ManualCommandIfsType";
+import {ManualCommandIfsOperator} from "./src/command/manual/ManualCommandIfsOperator";
+import {ManualCommandSqlData} from "./src/command/manual/ManualCommandSqlData";
 
 const  test2 = new GeneratorCommandService();
 test2.addCommand();

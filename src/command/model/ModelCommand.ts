@@ -1,6 +1,6 @@
-import {ModelCommandValidate} from "./ModelCommandValidate";
+import {ModelCommandValidate} from "./validate/ModelCommandValidate";
 import {ModelCommandIfs} from "./ModelCommandIfs";
-import {ModelCommandSql} from "./ModelCommandSql";
+import {ModelCommandSql} from "./sql/ModelCommandSql";
 import {ManualCommandType} from "../manual/ManualCommandType";
 import {ModelKey} from "./ModelKey";
 

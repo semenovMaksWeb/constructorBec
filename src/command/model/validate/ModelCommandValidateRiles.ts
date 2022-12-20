@@ -1,6 +1,6 @@
-import {ModelObjectAny} from "../../libs/ModelObjectAny";
-import {ManualCommandRilesType} from "../manual/ManualCommandRilesType";
-import {ManualCommandTypeVar} from "../manual/ManualCommandTypeVar";
+import {ModelObjectAny} from "../../../libs/ModelObjectAny";
+import {ManualCommandRilesType} from "../../manual/ManualCommandRilesType";
+import {ManualCommandTypeVar} from "../../manual/ManualCommandTypeVar";
 
 export class ModelCommandValidateRiles{
     private _type: string

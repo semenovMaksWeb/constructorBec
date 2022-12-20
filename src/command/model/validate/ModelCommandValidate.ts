@@ -1,6 +1,6 @@
 import {ModelCommandValidateRiles} from "./ModelCommandValidateRiles";
-import {ManualCommandRilesType} from "../manual/ManualCommandRilesType";
-import {ModelKey} from "./ModelKey";
+import {ManualCommandRilesType} from "../../manual/ManualCommandRilesType";
+import {ModelKey} from "../ModelKey";
 
 export class ModelCommandValidate extends  ModelKey{
     private readonly _riles: ModelCommandValidateRiles[];
