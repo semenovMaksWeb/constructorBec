@@ -19,7 +19,7 @@
     "vue-tsc": "^1.0.9"
   },
   "dependencies": {
-    "felc-components": "0.0.29",
+    "felc-components": "0.0.30",
     "vue": "^3.2.41",
     "vue-router": "^4.1.6"
   }

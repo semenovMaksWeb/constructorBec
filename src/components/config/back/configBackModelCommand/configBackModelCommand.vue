@@ -15,8 +15,6 @@
         @value="EmitSelectType"
         :label-required="true"
     />
-    <button @click="modelCommand.type = {id: 2, value: 'postgresql'}">test</button>
-    {{ modelCommand }}
   </div>
 </template>
 
@@ -54,4 +52,5 @@ export default {
 </script>
 
 <style lang="scss">
+@import "configBackModelCommand";
 </style>

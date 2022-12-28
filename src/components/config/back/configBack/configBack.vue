@@ -1,6 +1,6 @@
 <template>
   <div class="configBack">
-    {{ generatorCommandService.command }}
+    <ButtonAddModelCommand :generatorCommandService="generatorCommandService" />
     <ConfigBackModelCommand
       v-for="(elem, index) of generatorCommandService.command"
       :key="index"
@@ -12,11 +12,13 @@
 
 <script lang="ts">
 import  { ref } from "vue";
-import { GeneratorCommandService } from "../../../command/service/GeneratorCommandService";
-import ConfigBackModelCommand from "./configBackModelCommand/configBackModelCommand.vue";
+import { GeneratorCommandService } from "../../../../command/service/GeneratorCommandService";
+import ConfigBackModelCommand from "../configBackModelCommand/configBackModelCommand.vue";
+import ButtonAddModelCommand from "../button/ButtonAddModelCommand/ButtonAddModelCommand.vue";
 export default {
   name: "ConfigBack",
   components: {
+    ButtonAddModelCommand,
     ConfigBackModelCommand
 },
 setup(){
