@@ -1,16 +1,19 @@
 <template>
     <div class="config-back_block-element">
         <LabelBase :data-key-label="attrKeyLabel" :id="id" :text="labelText" :required="labelRequired" />
-        <InputBase :id="id"/>
+        <InputBase :value="value" v-bind="$attrs" :id="id"/>
     </div>
 </template>
 <script lang="ts">
 import { InputBase, LabelBase } from "felc-components";
-import { configBackBlockProps } from "../configBackBlockProps";
+import { configBackBlockProps } from "../lib/configBackBlockProps";
 export default {
     name: "ConfigBackBlockInput",
     props: {
-        ...configBackBlockProps
+        ...configBackBlockProps,
+      value: {
+          type: String
+      }
     },
     components: {
         InputBase,
@@ -19,6 +22,6 @@ export default {
 }
 </script>
 <style lang="scss">
-@import "src/components/config/back/block/configBackBlock";
+@import "../lib/configBackBlock";
 @import "configBackBlockInput";
 </style>

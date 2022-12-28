@@ -1,6 +1,7 @@
 <template>
   <div class="configBack">
-    <ConfigBackRow
+    {{ generatorCommandService.command }}
+    <ConfigBackModelCommand
       v-for="(elem, index) of generatorCommandService.command"
       :key="index"
       :model-command="elem"
@@ -10,18 +11,17 @@
 </template>
 
 <script lang="ts">
-import { ImagesBase } from "felc-components";
+import  { ref } from "vue";
 import { GeneratorCommandService } from "../../../command/service/GeneratorCommandService";
-import ConfigBackRow from "./configBackModelComand.vue";
+import ConfigBackModelCommand from "./configBackModelCommand/configBackModelCommand.vue";
 export default {
   name: "ConfigBack",
   components: {
-    ImagesBase,
-    ConfigBackRow
+    ConfigBackModelCommand
 },
 setup(){
-    const generatorCommandService = new GeneratorCommandService();
-    generatorCommandService.addCommand();
+    const generatorCommandService = ref(new GeneratorCommandService());
+    generatorCommandService.value.addCommand();
     return {
       generatorCommandService
     };

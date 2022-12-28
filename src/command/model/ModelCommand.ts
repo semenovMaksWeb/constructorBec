@@ -3,18 +3,19 @@ import {ModelCommandIfs} from "./ModelCommandIfs";
 import {ModelCommandSql} from "./sql/ModelCommandSql";
 import {ManualCommandType} from "../manual/ManualCommandType";
 import {ModelKey} from "./ModelKey";
+import {ModelSelect} from "../../libs/ModelSelect";
 
 export class ModelCommand extends ModelKey{
     private _ifs?: ModelCommandIfs[];
     private _sql?: ModelCommandSql;
     private _validate?: ModelCommandValidate[];
     private _children: ModelCommand[]
-    private _type: string;
+    private _type: ModelSelect;
 
     constructor() {
         super();
         this.key = null;
-        this._type = ManualCommandType.null;
+        this._type = {id:ManualCommandType.null, value: null};
     }
 
     /* type */
@@ -22,9 +23,9 @@ export class ModelCommand extends ModelKey{
         return this._type;
     }
 
-    set type(type: string){
+    set type(type: ModelSelect){
         this._type = type;
-        switch (type){
+        switch (type.value){
             case ManualCommandType.validate: {
                 this._validate = [new ModelCommandValidate()];
                 break;

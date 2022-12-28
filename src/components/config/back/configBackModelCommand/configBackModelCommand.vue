@@ -1,0 +1,57 @@
+<template>
+  <div class="configBackRow">
+    <ConfigBackBlockInput
+        :value="modelCommand.key"
+        @input="inputKey"
+        :attr-key-label="'command-model-key'"
+        :id="'key-' + index" label-text="key"
+        :label-required="true"
+    />
+    <ConfigBackBlockSelect
+        :values="modelCommand.type"
+        :list="manualCommandTypeList"
+        :attr-key-label="'command-model-type'"
+        :id="'type-' + index" label-text="type"
+        @value="EmitSelectType"
+        :label-required="true"
+    />
+    <button @click="modelCommand.type = {id: 2, value: 'postgresql'}">test</button>
+    {{ modelCommand }}
+  </div>
+</template>
+
+<script lang="ts">
+
+import { InputBase } from "felc-components";
+import { PropType } from "vue";
+import { ModelCommand } from "../../../../command/model/ModelCommand";
+
+import ConfigBackBlockSelect from "../block/configBackBlockSelect/configBackBlockSelect.vue";
+import ConfigBackBlockInput from "../block/configBackBlockInput/configBackBlockInput.vue";
+import { configBackModelCommand } from "./configBackModelCommand";
+import {ConfigBackModelCommandProps} from "./configBackModelCommandProps";
+export default {
+  name: "ConfigBackModelCommand",
+  props: {
+    modelCommand: {
+      type: Object as PropType<ModelCommand>
+    },
+    index: {
+      type: Number
+    }
+  },
+  components: {
+    ConfigBackBlockInput,
+    InputBase,
+    ConfigBackBlockSelect
+  },
+  setup(props:ConfigBackModelCommandProps){
+    return {
+      ...configBackModelCommand(props)
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+</style>
