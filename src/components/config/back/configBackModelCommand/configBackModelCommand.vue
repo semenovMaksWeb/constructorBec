@@ -1,5 +1,9 @@
 <template>
   <div class="configBackRow">
+    <ButtonDeleteModelCommand
+        :generator-command-service="generatorCommandService"
+        :index="index"
+    />
     <ConfigBackBlockInput
         :value="modelCommand.key"
         @input="inputKey"
@@ -28,9 +32,14 @@ import ConfigBackBlockSelect from "../block/configBackBlockSelect/configBackBloc
 import ConfigBackBlockInput from "../block/configBackBlockInput/configBackBlockInput.vue";
 import { configBackModelCommand } from "./configBackModelCommand";
 import {ConfigBackModelCommandProps} from "./configBackModelCommandProps";
+import ButtonDeleteModelCommand from "../button/buttonDeleteModelCommand/buttonDeleteModelCommand.vue";
+import {GeneratorCommandService} from "../../../../command/service/GeneratorCommandService";
 export default {
   name: "ConfigBackModelCommand",
   props: {
+    generatorCommandService: {
+      type: Object as unknown as GeneratorCommandService
+    },
     modelCommand: {
       type: Object as PropType<ModelCommand>
     },
@@ -39,6 +48,7 @@ export default {
     }
   },
   components: {
+    ButtonDeleteModelCommand,
     ConfigBackBlockInput,
     InputBase,
     ConfigBackBlockSelect

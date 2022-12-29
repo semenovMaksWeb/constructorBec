@@ -2,10 +2,11 @@
   <div class="configBack">
     <ButtonAddModelCommand :generatorCommandService="generatorCommandService" />
     <ConfigBackModelCommand
-      v-for="(elem, index) of generatorCommandService.command"
-      :key="index"
-      :model-command="elem"
-      :index="index"
+        :generatorCommandService="generatorCommandService"
+        v-for="(elem, index) of generatorCommandService.command"
+        :key="index"
+        :model-command="elem"
+        :index="index"
     />
   </div>
 </template>
@@ -14,7 +15,7 @@
 import  { ref } from "vue";
 import { GeneratorCommandService } from "../../../../command/service/GeneratorCommandService";
 import ConfigBackModelCommand from "../configBackModelCommand/configBackModelCommand.vue";
-import ButtonAddModelCommand from "../button/ButtonAddModelCommand/ButtonAddModelCommand.vue";
+import ButtonAddModelCommand from "../button/buttonAddModelCommand/buttonAddModelCommand.vue";
 export default {
   name: "ConfigBack",
   components: {
@@ -23,7 +24,6 @@ export default {
 },
 setup(){
     const generatorCommandService = ref(new GeneratorCommandService());
-    generatorCommandService.value.addCommand();
     return {
       generatorCommandService
     };
