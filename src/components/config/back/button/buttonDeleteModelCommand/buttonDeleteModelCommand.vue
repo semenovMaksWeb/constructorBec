@@ -1,5 +1,5 @@
 <template>
-  <ButtonBase @click="clickButtonDeleteModelCommand">Удалить</ButtonBase>
+  <ButtonBase :title="'Удалить команду'" @click="clickButtonDeleteModelCommand">Удалить</ButtonBase>
 </template>
 
 <script lang="ts">

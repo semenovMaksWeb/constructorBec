@@ -19,6 +19,7 @@
         @value="EmitSelectType"
         :label-required="true"
     />
+    <ConfigBackIfs :modelCommand="modelCommand"/>
   </div>
 </template>
 
@@ -34,6 +35,7 @@ import { configBackModelCommand } from "./configBackModelCommand";
 import {ConfigBackModelCommandProps} from "./configBackModelCommandProps";
 import ButtonDeleteModelCommand from "../button/buttonDeleteModelCommand/buttonDeleteModelCommand.vue";
 import {GeneratorCommandService} from "../../../../command/service/GeneratorCommandService";
+import ConfigBackIfs from "../configBackIfs/configBackIfs.vue";
 export default {
   name: "ConfigBackModelCommand",
   props: {
@@ -48,6 +50,7 @@ export default {
     }
   },
   components: {
+    ConfigBackIfs,
     ButtonDeleteModelCommand,
     ConfigBackBlockInput,
     InputBase,

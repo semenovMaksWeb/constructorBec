@@ -1,5 +1,5 @@
 <template>
-  <ButtonBase @click="clickButtonAddModelCommand">Добавить</ButtonBase>
+  <ButtonBase :title="'Добавить команду'" @click="clickButtonAddModelCommand">Добавить</ButtonBase>
 </template>
 
 <script lang="ts">

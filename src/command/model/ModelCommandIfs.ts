@@ -31,9 +31,11 @@ export class ModelCommandIfs{
     get params(){
         return this._params;
     }
+
     get value(){
         return this._value;
     }
+
     get operator(){
         return this._operator;
     }
@@ -41,6 +43,7 @@ export class ModelCommandIfs{
     set value(value:any){
         this._value = value;
     }
+
     set operator(operator:string){
         this._operator = operator;
     }
