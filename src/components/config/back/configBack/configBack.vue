@@ -1,4 +1,5 @@
 <template>
+  {{ generatorCommandService }}
   <div class="configBack">
     <ButtonAddModelCommand :generatorCommandService="generatorCommandService" />
     <ConfigBackModelCommand

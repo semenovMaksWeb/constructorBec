@@ -11,7 +11,7 @@ export function buttonAddConfigBackIfs(props:ButtonAddConfigBackIfsProps){
     }
 
     const disableButton = computed(()=>{
-        return valueType.value.id === null;
+        return !valueType?.value?.id || valueType?.value?.id === null;
     })
 
     const clickButtonAddConfigBackIfs = () =>{

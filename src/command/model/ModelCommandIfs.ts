@@ -1,11 +1,12 @@
 import {ModelCommandData} from "./ModelCommandData";
 import {ManualCommandIfsType} from "../manual/ManualCommandIfsType";
+import { ModelSelect } from "../../libs/ModelSelect";
 
 export class ModelCommandIfs{
     private readonly _dataset?: ModelCommandData
     private readonly _params?: ModelCommandData;
     private _value?: any;
-    private _operator?: string;
+    private _operator?: ModelSelect;
 
     constructor(type:string) {
         switch (type){
@@ -19,7 +20,7 @@ export class ModelCommandIfs{
                 this._value = null
                 break;
             case ManualCommandIfsType.operator:
-                this._operator = null
+                this._operator = { id: null, value: null }
                 break;
         }
     }
@@ -44,7 +45,7 @@ export class ModelCommandIfs{
         this._value = value;
     }
 
-    set operator(operator:string){
+    set operator(operator:ModelSelect){
         this._operator = operator;
     }
 

@@ -6,7 +6,6 @@
         :key="index"
         :modelCommandIfs="modelCommandIfs"
     />
-    {{ modelCommand }}
   </div>
 
 </template>
@@ -16,7 +15,7 @@
 import ButtonAddConfigBackIfs from "../button/buttonAddConfigBackIfs/buttonAddConfigBackIfs.vue";
 import {PropType} from "vue";
 import {ModelCommand} from "../../../../command/model/ModelCommand";
-import ConfigBackIfsRows from "./configBackIfsRows.vue";
+import ConfigBackIfsRows from "./configBackIfsRows/configBackIfsRows.vue";
 export default {
   name: "ConfigBackIfs",
   components: {ConfigBackIfsRows, ButtonAddConfigBackIfs},
