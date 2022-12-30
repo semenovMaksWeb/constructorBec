@@ -19,8 +19,8 @@ export const configBackBlockProps = {
 }
 
 export interface ConfigBackBlockProps {
-    id: Ref<string>;
-    labelText: Ref<string>;
-    labelRequired: Ref<boolean>;
-    attrKeyLabel: Ref<string>;
+    id: string;
+    labelText: string;
+    labelRequired: boolean;
+    attrKeyLabel: string;
 }
