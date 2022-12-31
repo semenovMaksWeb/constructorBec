@@ -7,4 +7,24 @@
     &[data-key-label=command-model-type]{
         margin-right: 5px;
     }
+
+    &[data-key-label=command-model-ifs-dataset]{
+        margin-right: 13px;
+    }
+
+    &[data-key-label=command-model-ifs-value]{
+        margin-right: 22px;
+    }
+
+    &[data-key-label=command-model-ifs-operator]{
+        margin-right: 3px;
+    }     
+
+    &[data-key-label=command-model-ifs-params]{
+        margin-right: 11px;
+    }
+    
+    &[data-key-label=command-model-type-ifs]{
+        margin-right: 8px;
+    }
 }

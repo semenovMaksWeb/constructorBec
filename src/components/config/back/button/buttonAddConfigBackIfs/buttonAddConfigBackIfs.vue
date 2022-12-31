@@ -3,7 +3,7 @@
     <ConfigBackBlockSelect
         :id="'ifs-type-add'"
         :list="manualCommandIfsTypeList"
-        :attr-key-label="'command-model-type'"
+        :attr-key-label="'command-model-type-ifs'"
         label-text="type-ifs"
         :label-required="true"
         :values="valueType"

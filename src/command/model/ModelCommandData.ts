@@ -5,8 +5,8 @@ export class ModelCommandData{
         return this._key;
     }
 
-    public addKey(){
-        this._key.push(null);
+    public addKey(val:string = null){
+        this._key.push(val);
     }
 
     public deleteKey(index:number){

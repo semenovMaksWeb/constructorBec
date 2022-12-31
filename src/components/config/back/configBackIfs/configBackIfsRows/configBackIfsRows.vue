@@ -1,7 +1,15 @@
 <template>
-  <div>
     <template v-if="modelCommandIfs.dataset">
+      <ConfigBackBlockTags
+        :label-required="true"
+        :labelText="'dataset'"
+        :attr-key-label="'command-model-ifs-dataset'" 
+        :values="modelCommandIfs.dataset.key" 
+        @push="tagPushDataset" 
+        @delete="tagDeleteDataset" 
+      />
     </template>
+
     <template v-if="modelCommandIfs.operator !== undefined">
       <ConfigBackBlockSelect
         :id="'ifs-operator'"
@@ -13,9 +21,18 @@
         @value="selectSaveOperator"
     />
     </template>
+
     <template v-if="modelCommandIfs.params">
-      {{ modelCommandIfs.params }}
+      <ConfigBackBlockTags
+        :label-required="true"
+        :labelText="'params'"
+        :attr-key-label="'command-model-ifs-params'" 
+        :values="modelCommandIfs.params.key" 
+        @push="tagPushParams" 
+        @delete="tagDeleteParams" 
+      />
     </template>
+
     <template v-if="modelCommandIfs.value !== undefined">
       <ConfigBackBlockInput
         :id="'ifs-value'"
@@ -26,7 +43,6 @@
         @input="inputSaveValue"
       />
     </template>
-  </div>
 </template>
 
 <script lang="ts">
@@ -39,9 +55,10 @@ import { ConfigBackIfsRowsProps } from "./configBackIfsRowsProps";
 import { configBackIfsRows } from "./configBackIfsRows"
 import ConfigBackBlockSelect from "../../block/configBackBlockSelect/configBackBlockSelect.vue";
 import ConfigBackBlockInput from "../../block/configBackBlockInput/configBackBlockInput.vue";
+import ConfigBackBlockTags from "../../block/configBackBlockTags/configBackBlockTags.vue";
 export default {
   name: "ConfigBackIfsRows",
-  components: { ButtonAddConfigBackIfs, ConfigBackBlockSelect, ConfigBackBlockInput },
+  components: { ButtonAddConfigBackIfs, ConfigBackBlockSelect, ConfigBackBlockInput, ConfigBackBlockTags },
   props: {
     modelCommand: {
       type: Object as PropType<ModelCommand>

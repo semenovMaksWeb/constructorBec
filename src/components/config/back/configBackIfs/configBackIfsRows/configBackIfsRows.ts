@@ -11,9 +11,29 @@ export function configBackIfsRows(props: ConfigBackIfsRowsProps) {
         props.modelCommandIfs.value = event.target.value;
     }
 
+    const tagPushDataset = (val: string) => {
+        props.modelCommandIfs.dataset.addKey(val);
+    }
+
+    const tagDeleteDataset = (index: number) => {
+        props.modelCommandIfs.dataset.deleteKey(index);
+    }
+
+    const tagPushParams = (val: string) => {
+        props.modelCommandIfs.params.addKey(val);
+    }
+    
+    const tagDeleteParams = (index: number) => {
+        props.modelCommandIfs.params.deleteKey(index);
+    }
+
     return {
         manualCommandIfsOperatorList,
         selectSaveOperator,
-        inputSaveValue
+        inputSaveValue,
+        tagPushDataset,
+        tagDeleteDataset,
+        tagPushParams,
+        tagDeleteParams
     }
 }
