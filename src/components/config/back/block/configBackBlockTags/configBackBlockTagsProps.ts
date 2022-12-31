@@ -1,5 +1,5 @@
-import {ConfigBackBlockProps} from "../lib/configBackBlockProps";
+import { ConfigBackBlockProps } from "../lib/configBackBlockProps";
 
 export interface ConfigBackBlockTagsProps extends ConfigBackBlockProps {
-
+    
 }

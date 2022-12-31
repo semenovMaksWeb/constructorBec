@@ -24,20 +24,21 @@
 </template>
 
 <script lang="ts">
-
 import { InputBase } from "felc-components";
 import { PropType } from "vue";
-import { ModelCommand } from "../../../../command/model/ModelCommand";
 
+import { ModelCommand } from "../../../../command/model/ModelCommand";
 import ConfigBackBlockSelect from "../block/configBackBlockSelect/configBackBlockSelect.vue";
 import ConfigBackBlockInput from "../block/configBackBlockInput/configBackBlockInput.vue";
 import { configBackModelCommand } from "./configBackModelCommand";
-import {ConfigBackModelCommandProps} from "./configBackModelCommandProps";
+import { ConfigBackModelCommandProps } from "./configBackModelCommandProps";
 import ButtonDeleteModelCommand from "../button/buttonDeleteModelCommand/buttonDeleteModelCommand.vue";
-import {GeneratorCommandService} from "../../../../command/service/GeneratorCommandService";
+import { GeneratorCommandService } from "../../../../command/service/GeneratorCommandService";
 import ConfigBackIfs from "../configBackIfs/configBackIfs.vue";
+
 export default {
   name: "ConfigBackModelCommand",
+
   props: {
     generatorCommandService: {
       type: Object as PropType<GeneratorCommandService>
@@ -49,6 +50,7 @@ export default {
       type: Number
     }
   },
+
   components: {
     ConfigBackIfs,
     ButtonDeleteModelCommand,
@@ -56,6 +58,7 @@ export default {
     InputBase,
     ConfigBackBlockSelect
   },
+  
   setup(props:ConfigBackModelCommandProps) {
     return {
       ...configBackModelCommand(props)

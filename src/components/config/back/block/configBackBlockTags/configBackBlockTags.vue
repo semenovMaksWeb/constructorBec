@@ -1,30 +1,42 @@
 <template>
     <div class="config-back_block-element">
-        <LabelBase :data-key-label="attrKeyLabel" :id="id" :text="labelText" :required="labelRequired" />
-        <TagBase :values="values" @push="pushEmit" @delete="deleteEmit"/>
+        <LabelBase 
+          :data-key-label="attrKeyLabel" 
+          :id="id" :text="labelText" 
+          :required="labelRequired"
+        />
+        <TagBase 
+          :values="values" 
+          @push="pushEmit" 
+          @delete="deleteEmit"
+        />
     </div>
 </template>
 
 <script lang="ts">
-import { TagBase, LabelBase } from "felc-components";
-import { configBackBlockProps } from "../lib/configBackBlockProps";
-import {ConfigBackBlockTagsProps} from "./configBackBlockTagsProps";
-import {ConfigBackBlockTagContext} from "./configBackBlockTagsContext";
-import {configBackBlockTags} from "./configBackBlockTags";
 import { PropType } from "vue";
+import { TagBase, LabelBase } from "felc-components";
 
+import { configBackBlockProps } from "../lib/configBackBlockProps";
+import { ConfigBackBlockTagsProps } from "./configBackBlockTagsProps";
+import { ConfigBackBlockTagContext } from "./configBackBlockTagsContext";
+import { configBackBlockTags } from "./configBackBlockTags";
+ 
 export default {
     name: "configBackBlockTags",
+
     props: {
         ...configBackBlockProps,
         values: {
           type: Object as PropType<String[]>
         }
     },
+
     components: {
       TagBase,
       LabelBase
     },
+    
     setup(props:ConfigBackBlockTagsProps, { emit }: ConfigBackBlockTagContext){
       return {
         ...configBackBlockTags(props, emit)

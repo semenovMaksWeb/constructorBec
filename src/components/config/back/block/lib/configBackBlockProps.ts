@@ -1,9 +1,8 @@
-import { Ref } from "vue";
 export const configBackBlockProps = {
     id: {
         type: String
     },
-
+    
     labelText: {
         type: String
     },

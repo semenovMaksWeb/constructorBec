@@ -1,4 +1,4 @@
-import {GeneratorCommandService} from "../../../../../command/service/GeneratorCommandService";
+import { GeneratorCommandService } from "../../../../../command/service/GeneratorCommandService";
 
 export interface ButtonDeleteModelCommandProps {
     generatorCommandService: GeneratorCommandService,

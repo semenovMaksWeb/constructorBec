@@ -1,5 +1,5 @@
 import { ConfigBackBlockTagEmit } from "./configBackBlockTagsContext";
-import {ConfigBackBlockTagsProps} from "./configBackBlockTagsProps";
+import { ConfigBackBlockTagsProps } from "./configBackBlockTagsProps";
 
 export function configBackBlockTags(
         props: ConfigBackBlockTagsProps, 
@@ -8,9 +8,11 @@ export function configBackBlockTags(
     const pushEmit = (val: string) => {
         emit("push", val);
     }
+
     const deleteEmit = (index: number) => {
         emit("delete", index);
     }
+    
     return {
         pushEmit,
         deleteEmit

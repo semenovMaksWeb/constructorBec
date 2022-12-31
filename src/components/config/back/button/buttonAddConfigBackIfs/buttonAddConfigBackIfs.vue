@@ -22,23 +22,28 @@
 </template>
 
 <script lang="ts">
-import { ButtonBase } from "felc-components";
-import ConfigBackBlockSelect from "../../block/configBackBlockSelect/configBackBlockSelect.vue";
-import {buttonAddConfigBackIfs} from "./buttonAddConfigBackIfs";
 import {PropType} from "vue";
-import {ModelCommand} from "../../../../../command/model/ModelCommand";
-import {ButtonAddConfigBackIfsProps} from "./buttonAddConfigBackIfsProps";
+import { ButtonBase } from "felc-components";
+
+import ConfigBackBlockSelect from "../../block/configBackBlockSelect/configBackBlockSelect.vue";
+import { buttonAddConfigBackIfs } from "./buttonAddConfigBackIfs";
+import { ModelCommand } from "../../../../../command/model/ModelCommand";
+import { ButtonAddConfigBackIfsProps } from "./buttonAddConfigBackIfsProps";
+
 export default {
   name: "ButtonAddConfigBackIfs",
+
   components: {
     ConfigBackBlockSelect,
     ButtonBase
   },
+
   props: {
     modelCommand: {
       type: Object as PropType<ModelCommand>
     },
   },
+
   setup(props:ButtonAddConfigBackIfsProps){
     return {
       ...buttonAddConfigBackIfs(props)
@@ -46,6 +51,7 @@ export default {
   }
 }
 </script>
+
 <style lang="scss">
 @import "buttonAddConfigBackIfs.scss";
 </style>

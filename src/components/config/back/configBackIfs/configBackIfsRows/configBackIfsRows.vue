@@ -44,25 +44,30 @@
         @input="inputSaveValue"
       />
     </template>
-    <ButtonDeleteConfigBackIfs :index="index" :modelCommand="modelCommand" />
+    <ButtonDeleteConfigBackIfs 
+      :index="index" 
+      :modelCommand="modelCommand" 
+    />
   </div>
  
 </template>
 
 <script lang="ts">
+import { PropType } from "vue";
 
-import ButtonAddConfigBackIfs from "../../button/buttonAddConfigBackIfs/buttonAddConfigBackIfs.vue";
-import {PropType} from "vue";
-import {ModelCommand} from "../../../../../command/model/ModelCommand";
-import {ModelCommandIfs} from "../../../../../command/model/ModelCommandIfs";
+import { ModelCommand } from "../../../../../command/model/ModelCommand";
+import { ModelCommandIfs } from "../../../../../command/model/ModelCommandIfs";
 import { ConfigBackIfsRowsProps } from "./configBackIfsRowsProps";
 import { configBackIfsRows } from "./configBackIfsRows"
 import ConfigBackBlockSelect from "../../block/configBackBlockSelect/configBackBlockSelect.vue";
 import ConfigBackBlockInput from "../../block/configBackBlockInput/configBackBlockInput.vue";
 import ConfigBackBlockTags from "../../block/configBackBlockTags/configBackBlockTags.vue";
 import ButtonDeleteConfigBackIfs from "../../button/buttonDeleteConfigBackIfs/buttonDeleteConfigBackIfs.vue";
+import ButtonAddConfigBackIfs from "../../button/buttonAddConfigBackIfs/buttonAddConfigBackIfs.vue";
+
 export default {
   name: "ConfigBackIfsRows",
+
   components: { 
     ButtonAddConfigBackIfs, 
     ConfigBackBlockSelect, 
@@ -70,6 +75,7 @@ export default {
     ConfigBackBlockTags, 
     ButtonDeleteConfigBackIfs 
   },
+
   props: {
     modelCommand: {
       type: Object as PropType<ModelCommand>
@@ -81,6 +87,7 @@ export default {
       type: Number
     }
   },
+
   setup(props: ConfigBackIfsRowsProps){
    return {
     ...configBackIfsRows(props)

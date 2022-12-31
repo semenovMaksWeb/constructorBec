@@ -1,1 +1,1 @@
-export type ModelObjectAny = { [key:string] : any};
+export type ModelObjectAny = { [key:string] : any };
