@@ -23,7 +23,7 @@ export default {
     ButtonAddModelCommand,
     ConfigBackModelCommand
 },
-setup(){
+setup() {
     const generatorCommandService = ref(new GeneratorCommandService());
     return {
       generatorCommandService

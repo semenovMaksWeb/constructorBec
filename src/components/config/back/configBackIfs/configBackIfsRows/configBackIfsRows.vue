@@ -1,4 +1,5 @@
 <template>
+  <div class="config-back-ifs-rows">
     <template v-if="modelCommandIfs.dataset">
       <ConfigBackBlockTags
         :label-required="true"
@@ -43,6 +44,9 @@
         @input="inputSaveValue"
       />
     </template>
+    <ButtonDeleteConfigBackIfs :index="index" :modelCommand="modelCommand" />
+  </div>
+ 
 </template>
 
 <script lang="ts">
@@ -56,15 +60,25 @@ import { configBackIfsRows } from "./configBackIfsRows"
 import ConfigBackBlockSelect from "../../block/configBackBlockSelect/configBackBlockSelect.vue";
 import ConfigBackBlockInput from "../../block/configBackBlockInput/configBackBlockInput.vue";
 import ConfigBackBlockTags from "../../block/configBackBlockTags/configBackBlockTags.vue";
+import ButtonDeleteConfigBackIfs from "../../button/buttonDeleteConfigBackIfs/buttonDeleteConfigBackIfs.vue";
 export default {
   name: "ConfigBackIfsRows",
-  components: { ButtonAddConfigBackIfs, ConfigBackBlockSelect, ConfigBackBlockInput, ConfigBackBlockTags },
+  components: { 
+    ButtonAddConfigBackIfs, 
+    ConfigBackBlockSelect, 
+    ConfigBackBlockInput, 
+    ConfigBackBlockTags, 
+    ButtonDeleteConfigBackIfs 
+  },
   props: {
     modelCommand: {
       type: Object as PropType<ModelCommand>
     },
     modelCommandIfs: {
       type: Object as PropType<ModelCommandIfs>
+    },
+    index: {
+      type: Number
     }
   },
   setup(props: ConfigBackIfsRowsProps){
@@ -76,8 +90,5 @@ export default {
 </script>
 
 <style lang="scss">
-.wrapper_back-ifs {
-  padding: var(--wrapper-padding);
-  border: var(--wrapper-border);
-}
+@import "configBackIfsRows.scss";
 </style>

@@ -7,6 +7,7 @@ import { ButtonBase } from "felc-components";
 import {GeneratorCommandService} from "../../../../../command/service/GeneratorCommandService";
 import {ButtonAddModelCommandProps} from "./buttonAddModelCommandProps";
 import {ButtonAddModelCommand} from "./buttonAddModelCommand";
+import { PropType } from "vue";
 export default {
   name: "ButtonAddModelCommand",
   components: {
@@ -14,7 +15,7 @@ export default {
   },
   props: {
     generatorCommandService: {
-      type: Object as unknown as GeneratorCommandService
+      type: Object as unknown as PropType<GeneratorCommandService>
     }
   },
   setup(props: ButtonAddModelCommandProps){

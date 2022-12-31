@@ -12,7 +12,7 @@
     <ButtonBase
         class="button-add_config_back_ifs"
         :disable="disableButton"
-        :title="'Добавить команду'"
+        :title="'Добавить условие'"
         @click="clickButtonAddConfigBackIfs"
     >
       Добавить
@@ -47,11 +47,5 @@ export default {
 }
 </script>
 <style lang="scss">
-.wrapper-button_add_config_back_ifs{
-  display: flex;
-  align-items: center;
-}
-.button-add_config_back_ifs{
-  margin-bottom: var(--wrapper-margin-bottom);
-}
+@import "buttonAddConfigBackIfs.scss";
 </style>

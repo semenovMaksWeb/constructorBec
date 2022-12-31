@@ -7,6 +7,7 @@ import { ButtonBase } from "felc-components";
 import {ButtonDeleteModelCommandProps} from "./buttonDeleteModelCommandProps";
 import {GeneratorCommandService} from "../../../../../command/service/GeneratorCommandService";
 import {buttonDeleteModelCommand} from "./buttonDeleteModelCommand";
+import { PropType } from "vue";
 export default {
   name: "ButtonDeleteModelCommand",
   components:{
@@ -14,7 +15,7 @@ export default {
   },
   props:{
     generatorCommandService: {
-      type: Object as unknown as GeneratorCommandService
+      type: Object as unknown as PropType<GeneratorCommandService>
     },
     index: {
       type: Number

@@ -2,9 +2,11 @@
   <div class="wrapper_back-ifs">
     <ButtonAddConfigBackIfs :modelCommand="modelCommand"/>
     <ConfigBackIfsRows
+        :modelCommand="modelCommand"
         v-for="(modelCommandIfs, index) in modelCommand.ifs"
         :key="index"
         :modelCommandIfs="modelCommandIfs"
+        :index="index"
     />
   </div>
 

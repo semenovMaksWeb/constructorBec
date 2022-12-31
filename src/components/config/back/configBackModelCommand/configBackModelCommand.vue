@@ -40,7 +40,7 @@ export default {
   name: "ConfigBackModelCommand",
   props: {
     generatorCommandService: {
-      type: Object as unknown as GeneratorCommandService
+      type: Object as PropType<GeneratorCommandService>
     },
     modelCommand: {
       type: Object as PropType<ModelCommand>
@@ -56,7 +56,7 @@ export default {
     InputBase,
     ConfigBackBlockSelect
   },
-  setup(props:ConfigBackModelCommandProps){
+  setup(props:ConfigBackModelCommandProps) {
     return {
       ...configBackModelCommand(props)
     }
