@@ -27,7 +27,6 @@
 import { InputBase } from "felc-components";
 import { PropType } from "vue";
 
-import { ModelCommand } from "../../../../command/model/ModelCommand";
 import ConfigBackBlockSelect from "../block/configBackBlockSelect/configBackBlockSelect.vue";
 import ConfigBackBlockInput from "../block/configBackBlockInput/configBackBlockInput.vue";
 import { configBackModelCommand } from "./configBackModelCommand";
@@ -35,6 +34,7 @@ import { ConfigBackModelCommandProps } from "./configBackModelCommandProps";
 import ButtonDeleteModelCommand from "../button/buttonDeleteModelCommand/buttonDeleteModelCommand.vue";
 import { GeneratorCommandService } from "../../../../command/service/GeneratorCommandService";
 import ConfigBackIfs from "../configBackIfs/configBackIfs.vue";
+import { modelCommandProps } from "../libs/modelCommandProps";
 
 export default {
   name: "ConfigBackModelCommand",
@@ -43,12 +43,7 @@ export default {
     generatorCommandService: {
       type: Object as PropType<GeneratorCommandService>
     },
-    modelCommand: {
-      type: Object as PropType<ModelCommand>
-    },
-    index: {
-      type: Number
-    }
+    ...modelCommandProps
   },
 
   components: {

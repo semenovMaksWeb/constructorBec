@@ -1,8 +1,6 @@
-import { ModelCommand } from "../../../../command/model/ModelCommand";
 import { GeneratorCommandService } from "../../../../command/service/GeneratorCommandService";
+import { ModelCommandProps } from "../libs/modelCommandProps";
 
-export interface ConfigBackModelCommandProps {
-    modelCommand: ModelCommand,
+export interface ConfigBackModelCommandProps extends ModelCommandProps {
     generatorCommandService: GeneratorCommandService,
-    index: number
 }

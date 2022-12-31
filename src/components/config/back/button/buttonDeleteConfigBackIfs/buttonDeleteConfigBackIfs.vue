@@ -2,7 +2,7 @@
   <ButtonBase 
     class="button_delete-config-back-ifs" 
     :title="'Удалить условие'" 
-    @click=""
+    @click="clickDeleteConfigBackIfs"
   >
     Удалить
   </ButtonBase>
@@ -10,9 +10,8 @@
   
 <script lang="ts">
 import { ButtonBase } from "felc-components";
-import { PropType } from "vue";
-
-import { ModelCommand } from "../../../../../command/model/ModelCommand";
+import { ModelCommandProps, modelCommandProps } from "../../libs/modelCommandProps";
+import { buttonDeleteConfigBackIfs } from "./buttonDeleteConfigBackIfs";
 
 export default {
   name: "ButtonDeleteConfigBackIfs",
@@ -21,12 +20,13 @@ export default {
     ButtonBase
   },
 
-  props:{
-    modelCommand: {
-      type: Object as PropType<ModelCommand>
-    },
-    index: {
-      type: Number
+  props: {
+    ...modelCommandProps,
+  },
+
+  setup(props: ModelCommandProps) {
+    return {
+      ...buttonDeleteConfigBackIfs(props)
     }
   }
 }

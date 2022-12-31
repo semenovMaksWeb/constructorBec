@@ -64,6 +64,7 @@ import ConfigBackBlockInput from "../../block/configBackBlockInput/configBackBlo
 import ConfigBackBlockTags from "../../block/configBackBlockTags/configBackBlockTags.vue";
 import ButtonDeleteConfigBackIfs from "../../button/buttonDeleteConfigBackIfs/buttonDeleteConfigBackIfs.vue";
 import ButtonAddConfigBackIfs from "../../button/buttonAddConfigBackIfs/buttonAddConfigBackIfs.vue";
+import { modelCommandProps } from "../../libs/modelCommandProps";
 
 export default {
   name: "ConfigBackIfsRows",
@@ -77,15 +78,10 @@ export default {
   },
 
   props: {
-    modelCommand: {
-      type: Object as PropType<ModelCommand>
-    },
+    ...modelCommandProps,
     modelCommandIfs: {
       type: Object as PropType<ModelCommandIfs>
     },
-    index: {
-      type: Number
-    }
   },
 
   setup(props: ConfigBackIfsRowsProps){
