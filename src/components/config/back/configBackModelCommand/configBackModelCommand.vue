@@ -19,12 +19,15 @@
         @value="EmitSelectType"
         :label-required="true"
     />
-    <ConfigBackIfs :modelCommand="modelCommand"/>
+    <ConfigBackIfs :modelCommand="modelCommand" />
+    <ConfigBackValidate 
+      :modelCommand="modelCommand" 
+      v-if="visibleValidate" 
+    />
   </div>
 </template>
 
 <script lang="ts">
-import { InputBase } from "felc-components";
 import { PropType } from "vue";
 
 import ConfigBackBlockSelect from "../block/configBackBlockSelect/configBackBlockSelect.vue";
@@ -35,6 +38,7 @@ import ButtonDeleteModelCommand from "../button/buttonDeleteModelCommand/buttonD
 import { GeneratorCommandService } from "../../../../command/service/GeneratorCommandService";
 import ConfigBackIfs from "../configBackIfs/configBackIfs.vue";
 import { modelCommandProps } from "../libs/modelCommandProps";
+import ConfigBackValidate from "../configBackValidate/configBackValidate.vue";
 
 export default {
   name: "ConfigBackModelCommand",
@@ -50,9 +54,9 @@ export default {
     ConfigBackIfs,
     ButtonDeleteModelCommand,
     ConfigBackBlockInput,
-    InputBase,
-    ConfigBackBlockSelect
-  },
+    ConfigBackBlockSelect,
+    ConfigBackValidate
+},
   
   setup(props:ConfigBackModelCommandProps) {
     return {

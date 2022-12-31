@@ -1,4 +1,5 @@
-import { manualCommandTypeList } from "../../../../command/manual/ManualCommandType";
+import { computed } from "vue";
+import { ManualCommandType, manualCommandTypeList } from "../../../../command/manual/ManualCommandType";
 import { ModelSelect } from "../../../../libs/ModelSelect";
 import { ConfigBackModelCommandProps } from "./configBackModelCommandProps";
 
@@ -11,9 +12,14 @@ export function configBackModelCommand(props: ConfigBackModelCommandProps){
         props.modelCommand.type = val;
     }
 
+    const visibleValidate = computed(() => { 
+        return props.modelCommand.type.value == ManualCommandType.validate;
+    })
+
     return {
         inputKey,
+        EmitSelectType,
         manualCommandTypeList,
-        EmitSelectType
+        visibleValidate
     }
 }
