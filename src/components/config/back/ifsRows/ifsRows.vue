@@ -1,7 +1,7 @@
 <template>
   <div class="config-back-ifs-rows">
     <template v-if="modelCommandIfs.dataset">
-      <ConfigBackBlockTags
+      <BlockTags
         :label-required="true"
         :labelText="'dataset'"
         :attr-key-label="'command-model-ifs-dataset'"
@@ -12,7 +12,7 @@
     </template>
 
     <template v-if="modelCommandIfs.operator !== undefined">
-      <ConfigBackBlockSelect
+      <BlockSelect
         :id="'ifs-operator'"
         :list="manualCommandIfsOperatorList"
         :attr-key-label="'command-model-ifs-operator'"
@@ -24,7 +24,7 @@
     </template>
 
     <template v-if="modelCommandIfs.params">
-      <ConfigBackBlockTags
+      <BlockTags
         :label-required="true"
         :labelText="'params'"
         :attr-key-label="'command-model-ifs-params'"
@@ -35,7 +35,7 @@
     </template>
 
     <template v-if="modelCommandIfs.value !== undefined">
-      <ConfigBackBlockInput
+      <BlockInput
         :id="'ifs-value'"
         :attr-key-label="'command-model-ifs-value'"
         label-text="value"
@@ -44,7 +44,7 @@
         @input="inputSaveValue"
       />
     </template>
-    <ButtonDeleteConfigBackIfs
+    <ButtonDeleteIfs
       :index="index"
       :modelCommand="modelCommand"
     />
@@ -55,14 +55,13 @@
 <script lang="ts">
 import { PropType } from "vue";
 
-import { ModelCommand } from "../../../../command/model/ModelCommand";
 import { ModelCommandIfs } from "../../../../command/model/ModelCommandIfs";
 import { IfsRowsProps } from "./ifsRowsProps";
 import { ifsRows } from "./ifsRows"
-import ConfigBackBlockSelect from "../block/blockSelect/blockSelect.vue";
-import ConfigBackBlockInput from "../block/blockInput/blockInput.vue";
-import ConfigBackBlockTags from "../block/blockTags/blockTags.vue";
-import ButtonDeleteConfigBackIfs from "../button/buttonDeleteIfs/buttonDeleteIfs.vue";
+import BlockSelect from "../block/blockSelect/blockSelect.vue";
+import BlockInput from "../block/blockInput/blockInput.vue";
+import BlockTags from "../block/blockTags/blockTags.vue";
+import ButtonDeleteIfs from "../button/buttonDeleteIfs/buttonDeleteIfs.vue";
 import ButtonAddConfigBackIfs from "../button/buttonAddIfs/buttonAddIfs.vue";
 import { modelCommandProps } from "../libs/modelCommandProps";
 
@@ -71,10 +70,10 @@ export default {
 
   components: {
     ButtonAddConfigBackIfs,
-    ConfigBackBlockSelect,
-    ConfigBackBlockInput,
-    ConfigBackBlockTags,
-    ButtonDeleteConfigBackIfs
+    BlockSelect,
+    BlockInput,
+    BlockTags,
+    ButtonDeleteIfs
   },
 
   props: {

@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper-button_add_config_back_ifs">
-    <ConfigBackBlockSelect
+    <BlockSelect
         :id="'ifs-type-add'"
         :list="manualCommandIfsTypeList"
         :attr-key-label="'command-model-type-ifs'"
@@ -25,7 +25,7 @@
 import {PropType} from "vue";
 import { ButtonBase } from "felc-components";
 
-import ConfigBackBlockSelect from "../../block/blockSelect/blockSelect.vue";
+import BlockSelect from "../../block/blockSelect/blockSelect.vue";
 import { buttonAddIfs } from "./buttonAddIfs";
 import { ModelCommand } from "../../../../../command/model/ModelCommand";
 import { ButtonAddIfsProps } from "./buttonAddIfsProps";
@@ -34,7 +34,7 @@ export default {
   name: "ButtonAddIfs",
 
   components: {
-    ConfigBackBlockSelect,
+    BlockSelect,
     ButtonBase
   },
 

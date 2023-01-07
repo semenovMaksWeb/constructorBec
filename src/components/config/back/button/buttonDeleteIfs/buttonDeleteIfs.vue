@@ -14,7 +14,7 @@ import { ModelCommandProps, modelCommandProps } from "../../libs/modelCommandPro
 import { buttonDeleteIfs } from "./buttonDeleteIfs";
 
 export default {
-  name: "ButtonDeleteConfigBackIfs",
+  name: "ButtonDeleteIfs",
   
   components: {
     ButtonBase
