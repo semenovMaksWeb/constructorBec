@@ -1,29 +1,30 @@
 <template>
-  <div class="wrapper_back-ifs">
-    <ButtonAddConfigBackIfs
+  <Wrapper>
+    <ButtonAddIfs
       :modelCommand="modelCommand"
     />
-    <ConfigBackIfsRows
+    <IfsRows
         v-for="(modelCommandIfs, index) in modelCommand.ifs"
         :key="index"
         :modelCommand="modelCommand"
         :modelCommandIfs="modelCommandIfs"
         :index="index"
     />
-  </div>
+  </Wrapper>
 </template>
 
 <script lang="ts">
 import { PropType } from "vue";
 
-import ButtonAddConfigBackIfs from "../button/buttonAddConfigBackIfs/buttonAddConfigBackIfs.vue";
+import ButtonAddIfs from "../button/buttonAddIfs/buttonAddIfs.vue";
 import { ModelCommand } from "../../../../command/model/ModelCommand";
-import ConfigBackIfsRows from "../configBackIfsRows/configBackIfsRows.vue";
+import IfsRows from "../configBackIfsRows/configBackIfsRows.vue";
+import Wrapper from "../../../wrapper/wrapper.vue";
 
 export default {
   name: "ConfigBackIfs",
 
-  components: { ConfigBackIfsRows, ButtonAddConfigBackIfs },
+  components: { IfsRows, ButtonAddIfs, Wrapper },
 
   props: {
     modelCommand: {
@@ -34,5 +35,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "configBackIfs.scss";
+@import "ifs.scss";
 </style>

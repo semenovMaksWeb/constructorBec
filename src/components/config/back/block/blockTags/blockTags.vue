@@ -17,16 +17,16 @@
 import { PropType } from "vue";
 import { TagBase, LabelBase } from "felc-components";
 
-import { configBackBlockProps } from "../../libs/configBackBlockProps";
-import { ConfigBackBlockTagsProps } from "./configBackBlockTagsProps";
-import { ConfigBackBlockTagContext } from "./configBackBlockTagsContext";
-import { configBackBlockTags } from "./configBackBlockTags";
+import { blockProps } from "../../libs/blockProps";
+import { BlockTagsProps } from "./blockTagsProps";
+import { BlockTagContext } from "./blockTagsContext";
+import { blockTags } from "./blockTags";
 
 export default {
     name: "configBackBlockTags",
 
     props: {
-        ...configBackBlockProps,
+        ...blockProps,
         values: {
           type: Object as PropType<String[]>
         }
@@ -37,9 +37,9 @@ export default {
       LabelBase
     },
 
-    setup(props:ConfigBackBlockTagsProps, { emit }: ConfigBackBlockTagContext){
+    setup(props:BlockTagsProps, { emit }: BlockTagContext){
       return {
-        ...configBackBlockTags(props, emit)
+        ...blockTags(props, emit)
       }
     }
 }

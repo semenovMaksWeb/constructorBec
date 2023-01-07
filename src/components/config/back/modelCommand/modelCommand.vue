@@ -1,17 +1,17 @@
 <template>
-  <div class="configBackRow">
+  <Wrapper>
     <ButtonDeleteModelCommand
         :generator-command-service="generatorCommandService"
         :index="index"
     />
-    <ConfigBackBlockInput
+    <BlockInput
         :value="modelCommand.key"
         @input="inputKey"
         :attr-key-label="'command-model-key'"
         :id="'key-' + index" label-text="key"
         :label-required="true"
     />
-    <ConfigBackBlockSelect
+    <BlockSelect
         :values="modelCommand.type"
         :list="manualCommandTypeList"
         :attr-key-label="'command-model-type'"
@@ -19,53 +19,52 @@
         @value="EmitSelectType"
         :label-required="true"
     />
-    <ConfigBackIfs :modelCommand="modelCommand" />
-    <ConfigBackValidate 
-      :modelCommand="modelCommand" 
-      v-if="visibleValidate" 
+    <Ifs :modelCommand="modelCommand" />
+    <Validate
+      :modelCommand="modelCommand"
+      v-if="visibleValidate"
     />
-  </div>
+  </Wrapper>
 </template>
 
 <script lang="ts">
 import { PropType } from "vue";
 
-import ConfigBackBlockSelect from "../block/configBackBlockSelect/configBackBlockSelect.vue";
-import ConfigBackBlockInput from "../block/configBackBlockInput/configBackBlockInput.vue";
-import { configBackModelCommand } from "./configBackModelCommand";
-import { ConfigBackModelCommandProps } from "./configBackModelCommandProps";
+import blockSelect from "../block/blockSelect/blockSelect.vue";
+import blockInput from "../block/blockInput/blockInput.vue";
+import { modelCommand } from "./ModelCommand";
+import { ConfigBackModelCommandProps } from "./ModelCommandProps";
 import ButtonDeleteModelCommand from "../button/buttonDeleteModelCommand/buttonDeleteModelCommand.vue";
 import { GeneratorCommandService } from "../../../../command/service/GeneratorCommandService";
-import ConfigBackIfs from "../configBackIfs/configBackIfs.vue";
+import Ifs from "../ifs/ifs.vue";
 import { modelCommandProps } from "../libs/modelCommandProps";
-import ConfigBackValidate from "../configBackValidate/configBackValidate.vue";
+import Validate from "../validate/validate.vue";
+import Wrapper from "../../../wrapper/wrapper.vue";
 
 export default {
-  name: "ConfigBackModelCommand",
+  name: "ModelCommand",
 
   props: {
     generatorCommandService: {
-      type: Object as PropType<GeneratorCommandService>
+      type: Object as PropType<GeneratorCommandService>,
+
     },
     ...modelCommandProps
   },
 
   components: {
-    ConfigBackIfs,
+    Ifs,
     ButtonDeleteModelCommand,
-    ConfigBackBlockInput,
-    ConfigBackBlockSelect,
-    ConfigBackValidate
+    blockInput,
+    blockSelect,
+    Validate,
+    Wrapper
 },
-  
+
   setup(props:ConfigBackModelCommandProps) {
     return {
-      ...configBackModelCommand(props)
+      ...modelCommand(props)
     }
   }
 }
 </script>
-
-<style lang="scss">
-@import "configBackModelCommand";
-</style>

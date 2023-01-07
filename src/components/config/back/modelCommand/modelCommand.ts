@@ -1,9 +1,9 @@
 import { computed } from "vue";
 import { ManualCommandType, manualCommandTypeList } from "../../../../command/manual/ManualCommandType";
 import { ModelSelect } from "../../../../libs/ModelSelect";
-import { ConfigBackModelCommandProps } from "./configBackModelCommandProps";
+import { ConfigBackModelCommandProps } from "./ModelCommandProps";
 
-export function configBackModelCommand(props: ConfigBackModelCommandProps){
+export function modelCommand(props: ConfigBackModelCommandProps){
     const inputKey = (val) => {
         props.modelCommand.key = val.target.value;
     }

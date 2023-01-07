@@ -14,8 +14,8 @@ import { PropType } from 'vue';
 
 import { ModelCommand } from '../../../../command/model/ModelCommand';
 import { ModelCommandValidate } from '../../../../command/model/validate/ModelCommandValidate';
-import ConfigBackBlockInput from '../block/configBackBlockInput/configBackBlockInput.vue';
-import { configBackValidateRows } from './configBackValidateRows';
+import ConfigBackBlockInput from '../block/blockInput/blockInput.vue';
+import { validateRows } from './validateRows';
 
 export default {
     name: "ConfigBackValidateRows",
@@ -30,10 +30,9 @@ export default {
             type: Object as PropType<ModelCommandValidate>
         }
     },
-
     setup(props){
         return {
-            ...configBackValidateRows(props)
+            ...validateRows(props)
         }
     }
 }

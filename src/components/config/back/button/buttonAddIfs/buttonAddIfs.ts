@@ -2,9 +2,9 @@ import { Ref, ref, computed } from "vue";
 
 import { manualCommandIfsTypeList } from "../../../../../command/manual/ManualCommandIfsType";
 import { ModelSelect } from "../../../../../libs/ModelSelect";
-import { ButtonAddConfigBackIfsProps } from "./buttonAddConfigBackIfsProps";
+import { ButtonAddIfsProps } from "./buttonAddIfsProps";
 
-export function buttonAddConfigBackIfs(props:ButtonAddConfigBackIfsProps) {
+export function buttonAddIfs(props:ButtonAddIfsProps) {
     const valueType: Ref<ModelSelect> = ref({ id: null, value: null });
 
     const valueTypeSave = (modelSelect:ModelSelect) => {

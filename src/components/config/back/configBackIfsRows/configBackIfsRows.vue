@@ -59,11 +59,11 @@ import { ModelCommand } from "../../../../command/model/ModelCommand";
 import { ModelCommandIfs } from "../../../../command/model/ModelCommandIfs";
 import { ConfigBackIfsRowsProps } from "./configBackIfsRowsProps";
 import { configBackIfsRows } from "./configBackIfsRows"
-import ConfigBackBlockSelect from "../block/configBackBlockSelect/configBackBlockSelect.vue";
-import ConfigBackBlockInput from "../block/configBackBlockInput/configBackBlockInput.vue";
-import ConfigBackBlockTags from "../block/configBackBlockTags/configBackBlockTags.vue";
+import ConfigBackBlockSelect from "../block/blockSelect/blockSelect.vue";
+import ConfigBackBlockInput from "../block/blockInput/blockInput.vue";
+import ConfigBackBlockTags from "../block/blockTags/blockTags.vue";
 import ButtonDeleteConfigBackIfs from "../button/buttonDeleteConfigBackIfs/buttonDeleteConfigBackIfs.vue";
-import ButtonAddConfigBackIfs from "../button/buttonAddConfigBackIfs/buttonAddConfigBackIfs.vue";
+import ButtonAddConfigBackIfs from "../button/buttonAddIfs/buttonAddIfs.vue";
 import { modelCommandProps } from "../libs/modelCommandProps";
 
 export default {

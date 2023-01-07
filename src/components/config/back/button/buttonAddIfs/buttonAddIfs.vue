@@ -4,7 +4,7 @@
         :id="'ifs-type-add'"
         :list="manualCommandIfsTypeList"
         :attr-key-label="'command-model-type-ifs'"
-        label-text="type-ifs"
+        label-text="ifs"
         :label-required="true"
         :values="valueType"
         @value="valueTypeSave"
@@ -25,13 +25,13 @@
 import {PropType} from "vue";
 import { ButtonBase } from "felc-components";
 
-import ConfigBackBlockSelect from "../../block/configBackBlockSelect/configBackBlockSelect.vue";
-import { buttonAddConfigBackIfs } from "./buttonAddConfigBackIfs";
+import ConfigBackBlockSelect from "../../block/blockSelect/blockSelect.vue";
+import { buttonAddIfs } from "./buttonAddIfs";
 import { ModelCommand } from "../../../../../command/model/ModelCommand";
-import { ButtonAddConfigBackIfsProps } from "./buttonAddConfigBackIfsProps";
+import { ButtonAddIfsProps } from "./buttonAddIfsProps";
 
 export default {
-  name: "ButtonAddConfigBackIfs",
+  name: "ButtonAddIfs",
 
   components: {
     ConfigBackBlockSelect,
@@ -44,14 +44,14 @@ export default {
     },
   },
 
-  setup(props:ButtonAddConfigBackIfsProps){
+  setup(props:ButtonAddIfsProps){
     return {
-      ...buttonAddConfigBackIfs(props)
+      ...buttonAddIfs(props)
     }
   }
 }
 </script>
 
 <style lang="scss">
-@import "buttonAddConfigBackIfs.scss";
+@import "buttonAddIfs";
 </style>

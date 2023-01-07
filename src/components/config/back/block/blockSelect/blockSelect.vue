@@ -19,17 +19,17 @@
 import { SelectBase, LabelBase } from "felc-components";
 import { PropType } from "vue";
 
-import { configBackBlockProps } from "../../libs/configBackBlockProps";
+import { blockProps } from "../../libs/blockProps";
 import { ModelSelect } from "../../../../../libs/ModelSelect";
-import { ConfigBackBlockSelectProps } from "./configBackBlockSelectProps";
-import { ConfigBackBlockSelectContext } from "./configBackBlockSelectContext";
-import { configBackBlockSelect } from "./configBackBlockSelect";
+import { BlockSelectProps } from "./blockSelectProps";
+import { BlockSelectContext } from "./blockSelectContext";
+import { blockSelect } from "./blockSelect";
 
 export default {
     name: "ConfigBackBlockSelect",
 
     props: {
-        ...configBackBlockProps,
+        ...blockProps,
         list: {
           type: Object as PropType<ModelSelect[]>
         },
@@ -43,9 +43,9 @@ export default {
         LabelBase
     },
 
-    setup(props:ConfigBackBlockSelectProps, { emit }: ConfigBackBlockSelectContext){
+    setup(props: BlockSelectProps, { emit }: BlockSelectContext){
       return {
-        ...configBackBlockSelect(props, emit)
+        ...blockSelect(props, emit)
       }
     }
 }

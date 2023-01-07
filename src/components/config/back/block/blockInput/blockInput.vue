@@ -16,13 +16,13 @@
 <script lang="ts">
 import { InputBase, LabelBase } from "felc-components";
 
-import { configBackBlockProps } from "../../libs/configBackBlockProps";
+import { blockProps } from "../../libs/blockProps";
 
 export default {
-    name: "ConfigBackBlockInput",
+    name: "BlockInput",
 
     props: {
-        ...configBackBlockProps,
+        ...blockProps,
         value: {
           type: String
         }
