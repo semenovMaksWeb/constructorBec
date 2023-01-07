@@ -13,7 +13,7 @@
         class="button-add_config_back_ifs"
         :disable="disableButton"
         :title="'Добавить условие'"
-        @click="clickButtonAddConfigBackIfs"
+        @click="clickButtonAddIfs"
     >
       Добавить
     </ButtonBase>

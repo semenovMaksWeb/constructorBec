@@ -2,7 +2,7 @@
   <ButtonBase 
     class="button_delete-config-back-ifs" 
     :title="'Удалить условие'" 
-    @click="clickDeleteConfigBackIfs"
+    @click="clickDeleteIfs"
   >
     Удалить
   </ButtonBase>

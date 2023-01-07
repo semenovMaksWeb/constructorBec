@@ -12,10 +12,10 @@ export function buttonAddIfs(props:ButtonAddIfsProps) {
     }
 
     const disableButton = computed(() => {
-        return !valueType?.value?.id || valueType?.value?.id === null;
+        return !valueType?.value?.id;
     })
 
-    const clickButtonAddConfigBackIfs = () => {
+    const clickButtonAddIfs = () => {
         props.modelCommand.addIfs(valueType.value.value);
         valueType.value = { id: null, value: null };
     }
@@ -25,6 +25,6 @@ export function buttonAddIfs(props:ButtonAddIfsProps) {
         valueType,
         valueTypeSave,
         disableButton,
-        clickButtonAddConfigBackIfs
+        clickButtonAddIfs
     }
 }

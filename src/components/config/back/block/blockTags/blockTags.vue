@@ -37,7 +37,7 @@ export default {
       LabelBase
     },
 
-    setup(props:BlockTagsProps, { emit }: BlockTagContext){
+    setup(props: BlockTagsProps, { emit }: BlockTagContext) {
       return {
         ...blockTags(props, emit)
       }

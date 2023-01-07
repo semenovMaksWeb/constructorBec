@@ -24,7 +24,7 @@ export default {
 
   props:{
     generatorCommandService: {
-      type: Object as unknown as PropType<GeneratorCommandService>
+      type: Object as PropType<GeneratorCommandService>
     },
     index: {
       type: Number
