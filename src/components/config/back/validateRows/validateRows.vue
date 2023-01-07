@@ -1,12 +1,13 @@
 <template>
-        <ConfigBackBlockInput
-            :value="modelCommand.key"
-            @input="inputKey"
-            :attr-key-label="'command-model-validate-key'"
-            :id="'command-model-validate-key'"
-            label-text="key"
-            :label-required="true"
-        />
+  <ConfigBackBlockInput
+      :value="modelCommand.key"
+      @input="inputKey"
+      :attr-key-label="'command-model-validate-key'"
+      :id="'command-model-validate-key'"
+      label-text="key"
+      :label-required="true"
+  />
+  <ValidateRules :validate="validate" />
 </template>
 
 <script lang="ts">
@@ -16,11 +17,12 @@ import { ModelCommand } from '../../../../command/model/ModelCommand';
 import { ModelCommandValidate } from '../../../../command/model/validate/ModelCommandValidate';
 import ConfigBackBlockInput from '../block/blockInput/blockInput.vue';
 import { validateRows } from './validateRows';
+import ValidateRules from "../validateRules/validateRules.vue";
 
 export default {
-    name: "ConfigBackValidateRows",
+    name: "ValidateRows",
 
-    components: { ConfigBackBlockInput },
+    components: { ValidateRules, ConfigBackBlockInput },
 
     props: {
         modelCommand: {

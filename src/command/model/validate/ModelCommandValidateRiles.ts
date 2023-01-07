@@ -1,21 +1,22 @@
 import {ModelObjectAny} from "../../../libs/ModelObjectAny";
 import {ManualCommandRilesType} from "../../manual/ManualCommandRilesType";
 import {ManualCommandTypeVar} from "../../manual/ManualCommandTypeVar";
+import {ModelSelect} from "../../../libs/ModelSelect";
 
 export class ModelCommandValidateRiles{
-    private _type: string
+    private _type: ModelSelect
     private _error: string
     private _params?: ModelObjectAny
 
     constructor() {
-        this.type = ManualCommandRilesType.null;
+        this.type = { id:null, value: null };
         this._error = "";
         this._params = null;
     }
 
-    set type(type:string){
+    set type(type:ModelSelect){
         this._type = type;
-        switch (type){
+        switch (type.value){
             case ManualCommandRilesType.var: {
                 this._params = {type: ManualCommandTypeVar.String};
                 break;

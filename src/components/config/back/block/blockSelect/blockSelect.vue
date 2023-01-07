@@ -26,7 +26,7 @@ import { BlockSelectContext } from "./blockSelectContext";
 import { blockSelect } from "./blockSelect";
 
 export default {
-    name: "ConfigBackBlockSelect",
+    name: "BlockSelect",
 
     props: {
         ...blockProps,

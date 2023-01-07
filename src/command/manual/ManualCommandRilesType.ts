@@ -3,3 +3,13 @@ export const enum ManualCommandRilesType {
     "var" = "var",
     null = "null"
 }
+export const manualCommandRilesTypeList = [
+    {
+        id: 1,
+        value: "req"
+    },
+    {
+        id: 2,
+        value: "var"
+    }
+]
