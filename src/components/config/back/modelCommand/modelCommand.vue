@@ -30,8 +30,8 @@
 <script lang="ts">
 import { PropType } from "vue";
 
-import blockSelect from "../block/blockSelect/blockSelect.vue";
-import blockInput from "../block/blockInput/blockInput.vue";
+import BlockSelect from "../block/blockSelect/blockSelect.vue";
+import BlockInput from "../block/blockInput/blockInput.vue";
 import { modelCommand } from "./ModelCommand";
 import { ConfigBackModelCommandProps } from "./ModelCommandProps";
 import ButtonDeleteModelCommand from "../button/buttonDeleteModelCommand/buttonDeleteModelCommand.vue";
@@ -55,8 +55,8 @@ export default {
   components: {
     Ifs,
     ButtonDeleteModelCommand,
-    blockInput,
-    blockSelect,
+    BlockInput,
+    BlockSelect,
     Validate,
     Wrapper
 },

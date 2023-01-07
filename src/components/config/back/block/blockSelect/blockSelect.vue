@@ -52,5 +52,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../libs/configBackBlock";
+@import "../../libs/block";
 </style>
