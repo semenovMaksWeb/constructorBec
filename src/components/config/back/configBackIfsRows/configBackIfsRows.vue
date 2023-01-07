@@ -4,10 +4,10 @@
       <ConfigBackBlockTags
         :label-required="true"
         :labelText="'dataset'"
-        :attr-key-label="'command-model-ifs-dataset'" 
-        :values="modelCommandIfs.dataset.key" 
-        @push="tagPushDataset" 
-        @delete="tagDeleteDataset" 
+        :attr-key-label="'command-model-ifs-dataset'"
+        :values="modelCommandIfs.dataset.key"
+        @push="tagPushDataset"
+        @delete="tagDeleteDataset"
       />
     </template>
 
@@ -27,10 +27,10 @@
       <ConfigBackBlockTags
         :label-required="true"
         :labelText="'params'"
-        :attr-key-label="'command-model-ifs-params'" 
-        :values="modelCommandIfs.params.key" 
-        @push="tagPushParams" 
-        @delete="tagDeleteParams" 
+        :attr-key-label="'command-model-ifs-params'"
+        :values="modelCommandIfs.params.key"
+        @push="tagPushParams"
+        @delete="tagDeleteParams"
       />
     </template>
 
@@ -44,37 +44,37 @@
         @input="inputSaveValue"
       />
     </template>
-    <ButtonDeleteConfigBackIfs 
-      :index="index" 
-      :modelCommand="modelCommand" 
+    <ButtonDeleteConfigBackIfs
+      :index="index"
+      :modelCommand="modelCommand"
     />
   </div>
- 
+
 </template>
 
 <script lang="ts">
 import { PropType } from "vue";
 
-import { ModelCommand } from "../../../../../command/model/ModelCommand";
-import { ModelCommandIfs } from "../../../../../command/model/ModelCommandIfs";
+import { ModelCommand } from "../../../../command/model/ModelCommand";
+import { ModelCommandIfs } from "../../../../command/model/ModelCommandIfs";
 import { ConfigBackIfsRowsProps } from "./configBackIfsRowsProps";
 import { configBackIfsRows } from "./configBackIfsRows"
-import ConfigBackBlockSelect from "../../block/configBackBlockSelect/configBackBlockSelect.vue";
-import ConfigBackBlockInput from "../../block/configBackBlockInput/configBackBlockInput.vue";
-import ConfigBackBlockTags from "../../block/configBackBlockTags/configBackBlockTags.vue";
-import ButtonDeleteConfigBackIfs from "../../button/buttonDeleteConfigBackIfs/buttonDeleteConfigBackIfs.vue";
-import ButtonAddConfigBackIfs from "../../button/buttonAddConfigBackIfs/buttonAddConfigBackIfs.vue";
-import { modelCommandProps } from "../../libs/modelCommandProps";
+import ConfigBackBlockSelect from "../block/configBackBlockSelect/configBackBlockSelect.vue";
+import ConfigBackBlockInput from "../block/configBackBlockInput/configBackBlockInput.vue";
+import ConfigBackBlockTags from "../block/configBackBlockTags/configBackBlockTags.vue";
+import ButtonDeleteConfigBackIfs from "../button/buttonDeleteConfigBackIfs/buttonDeleteConfigBackIfs.vue";
+import ButtonAddConfigBackIfs from "../button/buttonAddConfigBackIfs/buttonAddConfigBackIfs.vue";
+import { modelCommandProps } from "../libs/modelCommandProps";
 
 export default {
   name: "ConfigBackIfsRows",
 
-  components: { 
-    ButtonAddConfigBackIfs, 
-    ConfigBackBlockSelect, 
-    ConfigBackBlockInput, 
-    ConfigBackBlockTags, 
-    ButtonDeleteConfigBackIfs 
+  components: {
+    ButtonAddConfigBackIfs,
+    ConfigBackBlockSelect,
+    ConfigBackBlockInput,
+    ConfigBackBlockTags,
+    ButtonDeleteConfigBackIfs
   },
 
   props: {
@@ -87,11 +87,11 @@ export default {
   setup(props: ConfigBackIfsRowsProps){
    return {
     ...configBackIfsRows(props)
-   } 
+   }
   }
 }
 </script>
 
 <style lang="scss">
-@import "configBackIfsRows.scss";
+@import "configBackIfsRows";
 </style>

@@ -1,14 +1,14 @@
 <template>
     <div class="config-back_block-element">
-        <LabelBase 
-          :data-key-label="attrKeyLabel" 
-          :id="id" 
-          :text="labelText" 
+        <LabelBase
+          :data-key-label="attrKeyLabel"
+          :id="id"
+          :text="labelText"
           :required="labelRequired"
         />
-        <SelectBase 
-          :values="values" 
-          :list="list" 
+        <SelectBase
+          :values="values"
+          :list="list"
           :id="id"
           @value="selectEmit"
         />
@@ -19,7 +19,7 @@
 import { SelectBase, LabelBase } from "felc-components";
 import { PropType } from "vue";
 
-import { configBackBlockProps } from "../lib/configBackBlockProps";
+import { configBackBlockProps } from "../../libs/configBackBlockProps";
 import { ModelSelect } from "../../../../../libs/ModelSelect";
 import { ConfigBackBlockSelectProps } from "./configBackBlockSelectProps";
 import { ConfigBackBlockSelectContext } from "./configBackBlockSelectContext";
@@ -52,5 +52,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../lib/configBackBlock";
+@import "../../libs/configBackBlock";
 </style>

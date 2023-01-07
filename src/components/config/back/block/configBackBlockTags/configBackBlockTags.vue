@@ -1,13 +1,13 @@
 <template>
     <div class="config-back_block-element">
-        <LabelBase 
-          :data-key-label="attrKeyLabel" 
-          :id="id" :text="labelText" 
+        <LabelBase
+          :data-key-label="attrKeyLabel"
+          :id="id" :text="labelText"
           :required="labelRequired"
         />
-        <TagBase 
-          :values="values" 
-          @push="pushEmit" 
+        <TagBase
+          :values="values"
+          @push="pushEmit"
           @delete="deleteEmit"
         />
     </div>
@@ -17,11 +17,11 @@
 import { PropType } from "vue";
 import { TagBase, LabelBase } from "felc-components";
 
-import { configBackBlockProps } from "../lib/configBackBlockProps";
+import { configBackBlockProps } from "../../libs/configBackBlockProps";
 import { ConfigBackBlockTagsProps } from "./configBackBlockTagsProps";
 import { ConfigBackBlockTagContext } from "./configBackBlockTagsContext";
 import { configBackBlockTags } from "./configBackBlockTags";
- 
+
 export default {
     name: "configBackBlockTags",
 
@@ -36,7 +36,7 @@ export default {
       TagBase,
       LabelBase
     },
-    
+
     setup(props:ConfigBackBlockTagsProps, { emit }: ConfigBackBlockTagContext){
       return {
         ...configBackBlockTags(props, emit)
@@ -46,5 +46,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../lib/configBackBlock";
+@import "../../libs/configBackBlock";
 </style>

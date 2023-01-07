@@ -1,13 +1,13 @@
 import { ConfigBackIfsRowsProps } from "./configBackIfsRowsProps";
-import { manualCommandIfsOperatorList } from "../../../../../command/manual/ManualCommandIfsOperator"
-import { ModelSelect } from "../../../../../libs/ModelSelect";
+import { manualCommandIfsOperatorList } from "../../../../command/manual/ManualCommandIfsOperator"
+import { ModelSelect } from "../../../../libs/ModelSelect";
 
 export function configBackIfsRows(props: ConfigBackIfsRowsProps) {
-    const selectSaveOperator = (val: ModelSelect) => { 
+    const selectSaveOperator = (val: ModelSelect) => {
         props.modelCommandIfs.operator = val;
     }
 
-    const inputSaveValue = (event) => {       
+    const inputSaveValue = (event) => {
         props.modelCommandIfs.value = event.target.value;
     }
 
@@ -22,7 +22,7 @@ export function configBackIfsRows(props: ConfigBackIfsRowsProps) {
     const tagPushParams = (val: string) => {
         props.modelCommandIfs.params.addKey(val);
     }
-    
+
     const tagDeleteParams = (index: number) => {
         props.modelCommandIfs.params.deleteKey(index);
     }

@@ -1,4 +1,4 @@
-import { ConfigBackBlockProps } from "../lib/configBackBlockProps";
+import { ConfigBackBlockProps } from "../../libs/configBackBlockProps";
 import { ModelSelect } from "../../../../../libs/ModelSelect";
 
 export interface ConfigBackBlockSelectProps extends ConfigBackBlockProps {

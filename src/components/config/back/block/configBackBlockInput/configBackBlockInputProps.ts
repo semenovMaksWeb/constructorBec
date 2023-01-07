@@ -1,6 +1,6 @@
 import { Ref } from "vue";
 
-import { ConfigBackBlockProps } from "../lib/configBackBlockProps";
+import { ConfigBackBlockProps } from "../../libs/configBackBlockProps";
 
 export interface ConfigBackBlockInputProps extends ConfigBackBlockProps {
     value: Ref<string>

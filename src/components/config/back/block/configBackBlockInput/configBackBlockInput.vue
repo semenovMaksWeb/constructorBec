@@ -1,13 +1,13 @@
 <template>
     <div class="config-back_block-element">
-        <LabelBase 
-            :data-key-label="attrKeyLabel" 
-            :id="id" :text="labelText" 
-            :required="labelRequired" 
+        <LabelBase
+            :data-key-label="attrKeyLabel"
+            :id="id" :text="labelText"
+            :required="labelRequired"
         />
         <InputBase
-            :value="value" 
-            v-bind="$attrs" 
+            :value="value"
+            v-bind="$attrs"
             :id="id"
         />
     </div>
@@ -16,7 +16,7 @@
 <script lang="ts">
 import { InputBase, LabelBase } from "felc-components";
 
-import { configBackBlockProps } from "../lib/configBackBlockProps";
+import { configBackBlockProps } from "../../libs/configBackBlockProps";
 
 export default {
     name: "ConfigBackBlockInput",
@@ -36,5 +36,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../lib/configBackBlock";
+@import "../../libs/configBackBlock";
 </style>

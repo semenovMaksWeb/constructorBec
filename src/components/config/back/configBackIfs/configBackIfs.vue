@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper_back-ifs">
-    <ButtonAddConfigBackIfs 
+    <ButtonAddConfigBackIfs
       :modelCommand="modelCommand"
     />
     <ConfigBackIfsRows
@@ -18,7 +18,7 @@ import { PropType } from "vue";
 
 import ButtonAddConfigBackIfs from "../button/buttonAddConfigBackIfs/buttonAddConfigBackIfs.vue";
 import { ModelCommand } from "../../../../command/model/ModelCommand";
-import ConfigBackIfsRows from "./configBackIfsRows/configBackIfsRows.vue";
+import ConfigBackIfsRows from "../configBackIfsRows/configBackIfsRows.vue";
 
 export default {
   name: "ConfigBackIfs",
