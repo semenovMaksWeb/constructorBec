@@ -1,8 +1,8 @@
-import { ConfigBackIfsRowsProps } from "./configBackIfsRowsProps";
+import { IfsRowsProps } from "./ifsRowsProps";
 import { manualCommandIfsOperatorList } from "../../../../command/manual/ManualCommandIfsOperator"
 import { ModelSelect } from "../../../../libs/ModelSelect";
 
-export function configBackIfsRows(props: ConfigBackIfsRowsProps) {
+export function ifsRows(props: IfsRowsProps) {
     const selectSaveOperator = (val: ModelSelect) => {
         props.modelCommandIfs.operator = val;
     }

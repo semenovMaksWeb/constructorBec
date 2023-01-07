@@ -18,7 +18,7 @@ import { PropType } from "vue";
 
 import ButtonAddIfs from "../button/buttonAddIfs/buttonAddIfs.vue";
 import { ModelCommand } from "../../../../command/model/ModelCommand";
-import IfsRows from "../configBackIfsRows/configBackIfsRows.vue";
+import IfsRows from "../ifsRows/ifsRows.vue";
 import Wrapper from "../../../wrapper/wrapper.vue";
 
 export default {

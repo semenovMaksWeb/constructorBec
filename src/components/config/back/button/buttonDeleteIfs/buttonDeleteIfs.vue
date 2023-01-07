@@ -11,7 +11,7 @@
 <script lang="ts">
 import { ButtonBase } from "felc-components";
 import { ModelCommandProps, modelCommandProps } from "../../libs/modelCommandProps";
-import { buttonDeleteConfigBackIfs } from "./buttonDeleteConfigBackIfs";
+import { buttonDeleteIfs } from "./buttonDeleteIfs";
 
 export default {
   name: "ButtonDeleteConfigBackIfs",
@@ -26,12 +26,12 @@ export default {
 
   setup(props: ModelCommandProps) {
     return {
-      ...buttonDeleteConfigBackIfs(props)
+      ...buttonDeleteIfs(props)
     }
   }
 }
 </script>
   
 <style lang="scss">
-@import "buttonDeleteConfigBackIfs.scss"
+@import "buttonDeleteIfs"
 </style> 

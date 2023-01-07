@@ -23,7 +23,7 @@ import { BlockTagContext } from "./blockTagsContext";
 import { blockTags } from "./blockTags";
 
 export default {
-    name: "configBackBlockTags",
+    name: "BlockTags",
 
     props: {
         ...blockProps,

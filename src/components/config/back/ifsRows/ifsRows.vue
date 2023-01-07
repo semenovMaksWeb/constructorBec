@@ -57,12 +57,12 @@ import { PropType } from "vue";
 
 import { ModelCommand } from "../../../../command/model/ModelCommand";
 import { ModelCommandIfs } from "../../../../command/model/ModelCommandIfs";
-import { ConfigBackIfsRowsProps } from "./configBackIfsRowsProps";
-import { configBackIfsRows } from "./configBackIfsRows"
+import { IfsRowsProps } from "./ifsRowsProps";
+import { ifsRows } from "./ifsRows"
 import ConfigBackBlockSelect from "../block/blockSelect/blockSelect.vue";
 import ConfigBackBlockInput from "../block/blockInput/blockInput.vue";
 import ConfigBackBlockTags from "../block/blockTags/blockTags.vue";
-import ButtonDeleteConfigBackIfs from "../button/buttonDeleteConfigBackIfs/buttonDeleteConfigBackIfs.vue";
+import ButtonDeleteConfigBackIfs from "../button/buttonDeleteIfs/buttonDeleteIfs.vue";
 import ButtonAddConfigBackIfs from "../button/buttonAddIfs/buttonAddIfs.vue";
 import { modelCommandProps } from "../libs/modelCommandProps";
 
@@ -84,14 +84,14 @@ export default {
     },
   },
 
-  setup(props: ConfigBackIfsRowsProps){
+  setup(props: IfsRowsProps){
    return {
-    ...configBackIfsRows(props)
+    ...ifsRows(props)
    }
   }
 }
 </script>
 
 <style lang="scss">
-@import "configBackIfsRows";
+@import "ifsRows";
 </style>

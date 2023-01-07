@@ -1,6 +1,6 @@
 import { ModelCommandProps } from "../../libs/modelCommandProps";
 
-export function buttonDeleteConfigBackIfs(props: ModelCommandProps){
+export function buttonDeleteIfs(props: ModelCommandProps){
     const clickDeleteConfigBackIfs = () => {
         props.modelCommand.deleteIfs(props.index);
     }
